@@ -2,8 +2,8 @@
 
 A simple REST API for a song playlist. Data is stored **in memory** (resets on restart). No frontend, only API + Swagger.
 
-- **Source code:** https://github.com/<KULLANICI_ADIN>/<REPO_ADI>
-- **Live deployment (Swagger):** https://<DEPLOY_LINKIN>/api-docs
+- **Source code:** https://github.com/ozhanklnc/playlist-api
+- **Live deployment (Swagger):** https://playlist-api-iod5.onrender.com/api-docs
 
 ## Tech stack
 Node.js, Express, swagger-ui-express (OpenAPI 3), in-memory array as database.
@@ -45,7 +45,8 @@ npm start
 ## Issues encountered
 - Swagger UI static files don't load on Vercel serverless with the default setup, so Swagger CSS/JS are loaded from a CDN.
 - In-memory data resets on restart/cold start (serverless instances can also be separate), which is expected for this assignment.
-- (Buraya kendi yaşadığın sorunları ekle.)
+- On Render's free plan the service sleeps after inactivity, so the first request can take 30-60 seconds.
+- GitHub no longer accepts passwords for git push, so a personal access token was needed.
 
 ## AI usage
 AI was used to help generate and deploy the project.
